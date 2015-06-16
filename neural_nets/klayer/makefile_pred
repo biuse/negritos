@@ -1,0 +1,14 @@
+FCC=gfortran
+FLAGS=-O3 -fdefault-real-8
+#FCC=ifort
+#FLAGS=-traceback 
+obj=nn_params_klayer.o funciones_utiles.o nnet_utils_klayer.o nnet_mod_klayer.o prediction_code_klayer.o 
+
+%.o:%.f90
+	$(FCC) $(FLAGS) -c $*.f90
+
+
+opt: $(obj)
+	$(FCC) $(FLAGS) -o ../../bin/prediciton_code_klayer $(main) $(obj)
+clean:
+	rm -f *.o ../../bin/prediction_code_klayer 

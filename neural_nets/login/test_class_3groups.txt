@@ -1,0 +1,8 @@
+'../../data/input2_3groups_data'
+'../outputs/nhid100/first_3class_test_'
+2
+14 100 3
+0
+3
+0
+50

@@ -1,0 +1,8 @@
+'../../data/input_data'
+'../outputs/nhid10/first_test_'
+2
+16 10 4
+0
+3
+0
+50

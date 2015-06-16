@@ -1,0 +1,14 @@
+FCC=gfortran
+FLAGS=-O3 -fdefault-real-8 -fno-align-commons 
+#FCC=ifort
+#FLAGS=-traceback 
+obj=nn_params_klayer.o funciones_utiles.o nnet_mod_klayer.o nnet_utils_klayer.o optimizer_k.o levmar_k.o nnet_main_klayers.o 
+
+%.o:%.f90
+	$(FCC) $(FLAGS) -c $*.f90
+
+
+opt: $(obj)
+	$(FCC) $(FLAGS) -o nnet_main_klayers $(main) $(obj)
+clean:
+	rm -f *.o *.mod nnet_main_klayers 
